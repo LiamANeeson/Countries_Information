@@ -3,7 +3,6 @@ const errorHandler = require("../Utils/errorHandler");
 
 async function getCountryInfo(req, res) {
     const name = req.params.name;
-
     try {
         const data = await countryService.getCountryInfo(name);
         res.json(data);
