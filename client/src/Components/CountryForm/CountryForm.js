@@ -1,6 +1,8 @@
+import { Form, Button } from 'react-bootstrap';
+
 function CountryForm(props) {
   return (
-    <form onSubmit={props.onSubmit}>
+    <Form onSubmit={props.onSubmit}>
         <input 
             type = "text"
             name = "country"
@@ -8,8 +10,8 @@ function CountryForm(props) {
             value={props.value}
             onChange={props.onChange}
         />
-        <button>Submit</button>
-    </form>
+        <Button type='submit'>Submit</Button>
+    </Form>
   );
 }
 
