@@ -1,0 +1,14 @@
+.header-row {
+    display: flex;
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.search-row {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}

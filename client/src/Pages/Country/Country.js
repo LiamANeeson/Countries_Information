@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getCountryInfo } from '../Services/countryService'
-import CountryInfo from '../Components/CountryInfo';
+import { getCountryInfo } from '../../Services/countryService'
+import CountryInfo from '../../Components/CountryInfo/CountryInfo';
 
 function Country() {
     const { name } = useParams();
