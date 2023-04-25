@@ -7,7 +7,9 @@ import {
 } from 'react-bootstrap'
 import '../Home/Home.css'
 import CountryForm from '../../Components/CountryForm/CountryForm';
+import RegionDropdown from '../../Components/RegionDropdown/RegionDropdown';
 import { getCountryInfo } from '../../Services/countryService';
+
 
 function Home() {
   const [country, setCountry] = useState('');
@@ -37,6 +39,7 @@ function Home() {
       <Row className='search-row'>
         <Col md={6}>
           <CountryForm value={country} onChange={handleChange} onSubmit={handleSubmit} />
+          <RegionDropdown />
         </Col>
       </Row>
     </Container>
