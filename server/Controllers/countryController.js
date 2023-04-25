@@ -3,6 +3,7 @@ const errorHandler = require("../Utils/errorHandler");
 
 async function getCountryInfo(req, res) {
     const name = req.params.name;
+
     try {
         const data = await countryService.getCountryInfo(name);
         res.json(data);
@@ -22,7 +23,19 @@ async function getCountryInfoCurrency(req, res) {
     }
 }
 
+async function getCountryInfoLanguage(req, res) {
+    const language = req.params.language;
+
+    try {
+        const data = await countryService.getCountryInfoLanguage(language);
+        res.json(data);
+    } catch (err) {
+        errorHandler(err, res)
+    }
+}
+
 module.exports = {
     getCountryInfo,
-    getCountryInfoCurrency
+    getCountryInfoCurrency,
+    getCountryInfoLanguage
 }
