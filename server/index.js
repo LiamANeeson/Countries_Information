@@ -10,10 +10,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/countries", countryRoutes);
-
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-  });
   
 // Start Server
 app.listen(port, () => {
