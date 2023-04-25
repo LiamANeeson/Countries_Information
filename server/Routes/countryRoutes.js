@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.get("/currency/:currency", countryController.getCountryInfoCurrency)
 router.get("/language/:language", countryController.getCountryInfoLanguage)
+router.get("/region/:region", countryController.getCountryInfoRegion)
 router.get("/:name", countryController.getCountryInfo);
 
 module.exports = router;

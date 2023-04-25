@@ -34,8 +34,20 @@ async function getCountryInfoLanguage(req, res) {
     }
 }
 
+async function getCountryInfoRegion(req, res) {
+    const region = req.params.region;
+
+    try {
+        const data = await countryService.getCountryInfoRegion(region);
+        res.json(data);
+    } catch (err) {
+        errorHandler(err, res)
+    }
+}
+
 module.exports = {
     getCountryInfo,
     getCountryInfoCurrency,
-    getCountryInfoLanguage
+    getCountryInfoLanguage,
+    getCountryInfoRegion
 }

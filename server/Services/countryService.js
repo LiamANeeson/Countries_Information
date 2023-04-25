@@ -36,8 +36,21 @@ async function getCountryInfoLanguage(language) {
   }
 }
 
+async function getCountryInfoRegion(region) {
+  const url = `https://restcountries.com/v3.1/region/${region}`
+  try {
+    const response = await axios.get(url);
+    const data = response.data;
+    return data;
+  } catch (err) {
+    console.error(err);
+    throw new Error("Error Fetching Country Data")
+  }
+}
+
 module.exports = {
     getCountryInfo,
     getCountryInfoCurrency,
-    getCountryInfoLanguage
+    getCountryInfoLanguage,
+    getCountryInfoRegion,
 }
