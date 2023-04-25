@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import {
   Container,
   Image,
@@ -21,6 +22,9 @@ function CountryInfo(props) {
             <tr>
               <td style={{ fontWeight: 'bold' }}>Official Name: </td>
               <td style={{ textAlign: 'right' }}>{countryInfo.name.official}</td>
+            </tr><tr>
+              <td style={{ fontWeight: 'bold' }}>Native Name: </td>
+              <td style={{ textAlign: 'right' }}>{countryInfo.name.nativeName[Object.keys(countryInfo.name.nativeName)[0]].common}</td>
             </tr>
             <tr>
               <td style={{ fontWeight: 'bold' }}>Population: </td>
@@ -36,11 +40,11 @@ function CountryInfo(props) {
             </tr>
             <tr>
               <td style={{ fontWeight: 'bold' }}>Currency: </td>
-              <td style={{ textAlign: 'right' }}>{countryInfo.currencies.EUR.name}</td>
+              <td style={{ textAlign: 'right' }}>{countryInfo.currencies[Object.keys(countryInfo.currencies)[0]].name}</td>
             </tr>
             <tr>
               <td style={{ fontWeight: 'bold' }}>Currency Symbol: </td>
-              <td style={{ textAlign: 'right' }}>{countryInfo.currencies.EUR.symbol}</td>
+              <td style={{ textAlign: 'right' }}>{countryInfo.currencies[Object.keys(countryInfo.currencies)[0]].symbol}</td>
             </tr>
             <tr>
               <td style={{ fontWeight: 'bold' }}>Languages: </td>
