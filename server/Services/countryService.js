@@ -24,7 +24,20 @@ async function getCountryInfoCurrency(currency) {
   }
 }
 
+async function getCountryInfoLanguage(language) {
+  const url = `https://restcountries.com/v3.1/lang/${language}`
+  try {
+    const response = await axios.get(url);
+    const data = response.data;
+    return data;
+  } catch (err) {
+    console.error(err);
+    throw new Error("Error Fetching Country Data")
+  }
+}
+
 module.exports = {
     getCountryInfo,
-    getCountryInfoCurrency
+    getCountryInfoCurrency,
+    getCountryInfoLanguage
 }
