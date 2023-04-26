@@ -7,7 +7,6 @@ async function getCountryInfo(name) {
         const data = response.data[0];
         return data;
     } catch (err) {
-        console.error(err);
         throw new Error("Error Fetching Country Data");
     }
 }
