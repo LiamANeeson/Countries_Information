@@ -15,7 +15,7 @@ function CountryInfo(props) {
     <Container style={{ display: 'flex', justifyContent: 'center' }}>
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <h1 className="text-center">{countryInfo.flag} {countryInfo.name.common} {countryInfo.flag}</h1>
-        <Image src={countryInfo.flags.svg}  width="300" height="200"/>
+        <Image src={countryInfo.flags.svg}  width="300" height="200" alt={`${countryInfo.name.common} Flag`} />
         <Table striped bordered hover style={{ marginTop: '30px', marginBottom: '30px' }}>
           <tbody>
             <tr>

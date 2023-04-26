@@ -1,11 +1,15 @@
 module.exports = {
-    preset: '@babel/preset-env',
-    transform: {
-      '^.+\\.jsx?$': 'babel-jest',
-    },
-    testMatch: ['**/__tests__/**/*.js?(x)', '**/?(*.)+(spec|test).js?(x)'],
-    moduleNameMapper: {
-      '\\.(css|less)$': 'identity-obj-proxy',
-    },
-  };
-  
+  preset: 'babel-jest',
+  testEnvironment: 'jsdom',
+  moduleFileExtensions: ['js', 'jsx'],
+  transform: {
+    '^.+\\.(js|jsx)$': 'babel-jest',
+  },
+  moduleNameMapper: {
+    '\\.(css|less)$': 'identity-obj-proxy',
+  },
+  testMatch: [
+    '**/__tests__/**/*.js?(x)',
+    '**/?(*.)+(spec|test).js?(x)',
+  ],
+};
