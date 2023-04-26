@@ -12,3 +12,14 @@ export const getCountryInfo = async (name) => {
     throw Error;
   }
 };
+
+export const getCountryInfoRegion = async (region) => {
+  const url = `${BASE_URL}/countries/region/${region}`;
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw Error;
+  }
+}
