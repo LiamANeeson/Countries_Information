@@ -20,7 +20,7 @@ const RegionDropdown = () => {
         <option value="oceania">Oceania</option>
       </select>
       {selectedRegion && (
-        <Link to={`/countries/region/${selectedRegion}`}>
+        <Link to={`countries/region/${selectedRegion}`}>
           <button>View Countries</button>
         </Link>
       )}
