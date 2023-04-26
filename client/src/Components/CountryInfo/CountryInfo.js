@@ -10,6 +10,9 @@ function CountryInfo(props) {
   if (!countryInfo) {
     return <div>Loading country information...</div>;
   }
+  
+  const nativeNamesArray = Object.keys(countryInfo.name.nativeName).map(key => countryInfo.name.nativeName[key].common);
+  let nativeNames = nativeNamesArray.join(', ');
 
   return (
     <Container style={{ display: 'flex', justifyContent: 'center' }}>
@@ -22,8 +25,8 @@ function CountryInfo(props) {
               <td style={{ fontWeight: 'bold' }}>Official Name: </td>
               <td style={{ textAlign: 'right' }}>{countryInfo.name.official}</td>
             </tr><tr>
-              <td style={{ fontWeight: 'bold' }}>Native Name: </td>
-              <td style={{ textAlign: 'right' }}>{countryInfo.name.nativeName[Object.keys(countryInfo.name.nativeName)[0]].common}</td>
+              <td style={{ fontWeight: 'bold' }}>Native Names: </td>
+              <td style={{ textAlign: 'right' }}>{nativeNames}</td>
             </tr>
             <tr>
               <td style={{ fontWeight: 'bold' }}>Population: </td>
