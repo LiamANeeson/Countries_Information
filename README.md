@@ -9,7 +9,7 @@ Application has been deployed via heroku [VIEW HERE](https://countries-informati
 2. Split into two seperate terminals
 3. In one terminal `cd client` and run `npm i`
 4. In second terminal remain in the root directory and run `npm i`
-5. You will need to create a `.env` in the root directroy. A `.envexample` file was added so you can copy this code to the `.env` file created. 
+5. You will need to create a `.env` in the root directroy. A `.envexample` file was added so you can copy this code to the `.env` file created. OR do this to make a copy `cp .envexample .env` 
 6. then run `npm start` in both terminal windows
 
 ## Run tests
