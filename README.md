@@ -82,5 +82,3 @@ The services folder is used to interact with the external API to fetch data rela
 `getCountryInfo(name)`: Async function that fetches data on specific country by name. 
 `getCountryInfo(Region)`: Async function that fetches a list of countries in a specific region. 
 
-
-
