@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = "https://countries-information.herokuapp.com/";
+const BASE_URL = "https://countries-information.herokuapp.com";
 
 export const getCountryInfo = async (name) => {
   const url = `${BASE_URL}/countries/${name}`;
