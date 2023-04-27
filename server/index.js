@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use((req, res, next) => {
-  res.setHeader('Content-Security-Policy', "img-src 'self' https://countries-information.herokuapp.com/; default-src 'self';");
+  res.setHeader('Content-Security-Policy', "img-src 'self' https://countries-information.herokuapp.com/; default-src 'self' http://localhost:8000;");
   next();
 });
 
