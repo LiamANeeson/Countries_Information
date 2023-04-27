@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "./RegionDropdown.css"
 
 const RegionDropdown = () => {
   const [selectedRegion, setSelectedRegion] = useState('');
@@ -9,8 +10,8 @@ const RegionDropdown = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="region">Search Countries in a region:  </label>
+    <div className='button-caption'>
+      <label htmlFor="region">Get list of countries in a region:  </label>
       <select id="region" value={selectedRegion} onChange={handleRegionChange}>
         <option value="">Select Region</option>
         <option value="africa">Africa</option>
@@ -21,7 +22,7 @@ const RegionDropdown = () => {
       </select>
       {selectedRegion && (
         <Link to={`countries/region/${selectedRegion}`}>
-          <button>View Countries</button>
+          <button className='view-countries-btn '>View Countries</button>
         </Link>
       )}
     </div>
