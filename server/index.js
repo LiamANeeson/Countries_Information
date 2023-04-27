@@ -10,8 +10,6 @@ app.use(cors());
 
 app.use(express.json());
 
-res.setHeader('Content-Security-Policy', "img-src 'self' https://restcountries.com/; default-src 'self';");
-
 app.use("/countries", countryRoutes);
 
 if (process.env.NODE_ENV === 'production') {
